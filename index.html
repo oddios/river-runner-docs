@@ -1,12 +1,158 @@
 <!DOCTYPE html>
+<!-- Declares the document type and HTML5 version -->
+
 <html lang="en">
+<!-- Opens the HTML document and specifies English as the language -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Sets the character encoding to UTF-8 for wide character support -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>River Runner - Survey123 Guide</title>
+  <!-- Makes the layout responsive on mobile devices -->
+
+  <title>River Runner (Survey123 Guide)</title>
+  <!-- Sets the page title shown on the browser tab -->
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Links to an external CSS file for page styling -->
 </head>
+
 <body>
-  <h1>River Runner (Survey123)</h1>
-  <p>This site documents how to use the Survey123 version of River Runner, and how it will inform future app development.</p>
+  <!-- Main content of the web page -->
+
+  <header>
+    <!-- Top section of the page containing title and navigation -->
+
+    <h1>🌊 River Runner (Survey123)</h1>
+    <!-- Main heading of the page -->
+
+    <p>A field data collection tool for tracking river hazards and health.</p>
+    <!-- Subheading/introductory paragraph -->
+
+    <nav>
+      <!-- Navigation menu with anchor links to page sections -->
+
+      <a href="#overview">Overview</a>
+      <!-- Link to the Overview section -->
+
+      <a href="#usage">Usage Guide</a>
+      <!-- Link to the Usage Guide section -->
+
+      <a href="#observations">Observation Types</a>
+      <!-- Link to the Observation Types section -->
+
+      <a href="#lessons">Design Notes</a>
+      <!-- Link to the Design Notes section -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main content of the page -->
+
+    <section id="overview">
+      <!-- Overview section with unique ID for navigation -->
+
+      <h2>Project Overview</h2>
+      <!-- Subheading for this section -->
+
+      <p>
+        River Runner (Survey123 edition) is a prototype tool for documenting
+        river conditions using ESRI's Survey123. It supports community-driven
+        reporting of invasive species, erosion, blockages, and more.
+      </p>
+      <!-- Description of the project’s purpose and goals -->
+    </section>
+
+    <section id="usage">
+      <!-- Usage Guide section -->
+
+      <h2>How to Use the Survey</h2>
+      <!-- Subheading for the Usage section -->
+
+      <ol>
+        <!-- Ordered list of steps for using the survey -->
+
+        <li>Install the Survey123 Field App on your phone.</li>
+        <!-- Step 1: install the app -->
+
+        <li>Open the provided link or scan the QR code.</li>
+        <!-- Step 2: access the survey -->
+
+        <li>
+          Choose an observation type, take a photo, add attributes, and
+          record your location.
+        </li>
+        <!-- Step 3: use the form to submit an observation -->
+      </ol>
+    </section>
+
+    <section id="observations">
+      <!-- Section that outlines supported observation types -->
+
+      <h2>Observation Types</h2>
+      <!-- Subheading for this section -->
+
+      <ul>
+        <!-- Unordered list of observation type descriptions -->
+
+        <li>
+          <strong>Invasive/Non-Native Species:</strong> Dropdown with species,
+          plus notes.
+        </li>
+        <!-- Lists the invasive species observation structure -->
+
+        <li>
+          <strong>Riverbank Erosion:</strong> Severity, bank side, vegetation
+          cover, notes.
+        </li>
+        <!-- Describes riverbank erosion structure -->
+
+        <li>
+          <strong>Trash or Dumping:</strong> Type, location, size.
+        </li>
+        <!-- Describes trash dumping structure -->
+
+        <li>
+          <strong>Snag Piles / Log Jams:</strong> Size, hazard level,
+          visibility.
+        </li>
+        <!-- Describes log jam structure -->
+      </ul>
+    </section>
+
+    <section id="lessons">
+      <!-- Section with notes about design ideas for the Flutter version -->
+
+      <h2>Design Notes for Flutter Version</h2>
+      <!-- Subheading -->
+
+      <ul>
+        <!-- Bullet points listing key design notes -->
+
+        <li>Observation schema will be defined with classes, not maps.</li>
+        <!-- Note about how types will be structured in code -->
+
+        <li>Three-screen flow: Sighting → Approach → Location.</li>
+        <!-- Explains the form flow design -->
+
+        <li>Offline support and local JSON storage planned.</li>
+        <!-- Highlights offline capability needs -->
+
+        <li>Form customization is easier when detached from ESRI.</li>
+        <!-- Insight about working independently from Survey123 -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Bottom footer of the page -->
+
+    <p>
+      Made by Travis Dodd ·
+      <a href="https://github.com/oddios/river-runner-docs">GitHub Repo</a>
+    </p>
+    <!-- Credit and link to GitHub repo -->
+  </footer>
 </body>
 </html>

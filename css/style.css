@@ -1,0 +1,86 @@
+body {
+  font-family: sans-serif;
+  /* Sets the font family for all text */
+
+  line-height: 1.6;
+  /* Sets vertical spacing between lines for readability */
+
+  margin: 0;
+  padding: 0;
+  /* Removes default browser spacing */
+
+  background: #f8f9fa;
+  /* Light gray background for the page */
+
+  color: #222;
+  /* Dark gray text color */
+}
+
+header {
+  background: #0077b6;
+  /* Blue background for header */
+
+  color: white;
+  /* White text in header */
+
+  padding: 1rem;
+  /* Adds spacing inside the header */
+
+  text-align: center;
+  /* Centers all header text */
+}
+
+nav a {
+  margin: 0 1rem;
+  /* Adds spacing between nav links */
+
+  color: #ade8f4;
+  /* Light blue color for links */
+
+  text-decoration: none;
+  /* Removes underlines from links */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  /* Underline links on hover for clarity */
+}
+
+main {
+  max-width: 800px;
+  /* Limits the width of the main content area */
+
+  margin: 2rem auto;
+  /* Centers the main content and adds vertical spacing */
+
+  padding: 1rem;
+  /* Adds inner spacing */
+
+  background: white;
+  /* White background for content box */
+
+  border-radius: 8px;
+  /* Rounds the corners slightly */
+}
+
+h2 {
+  border-bottom: 2px solid #0077b6;
+  /* Blue underline to highlight section titles */
+
+  padding-bottom: 0.3rem;
+  /* Adds spacing between the title text and border */
+}
+
+footer {
+  text-align: center;
+  /* Centers footer text */
+
+  font-size: 0.9rem;
+  /* Makes the footer text slightly smaller */
+
+  color: #666;
+  /* Gray text color */
+
+  margin: 2rem 0;
+  /* Adds spacing above and below the footer */
+}
