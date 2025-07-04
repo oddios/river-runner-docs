@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+name: Deploy static content to Pages
 
 on:
   push:
@@ -15,13 +15,17 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -29,24 +33,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Make Eleventy executable
-        run: chmod +x ./node_modules/.bin/eleventy
-
       - name: Build with Eleventy
         run: npm run build
 
-      - name: Upload output to Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
