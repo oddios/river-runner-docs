@@ -15,9 +15,8 @@
   "homepage": "https://github.com/oddios/river-runner-docs#readme",
   "keywords": [],
  "scripts": {
-  "start": "npx @11ty/eleventy --serve",
-  "build": "npx @11ty/eleventy",
-  "test": "echo \"Error: no test specified\" && exit 1"
+  "start": "node ./node_modules/@11ty/eleventy/cmd.js --serve",
+  "build": "node ./node_modules/@11ty/eleventy/cmd.js"
 },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
