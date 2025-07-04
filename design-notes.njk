@@ -1,0 +1,85 @@
+---
+layout: base.njk
+title: Design Notes
+---
+
+<main>
+  <section>
+    <h1>Design Notes</h1>
+  </section>
+
+  <section>
+    <h2>Project Origins and Context</h2>
+    <p>
+      River Runner was developed as part of a graduate GIS practicum in partnership with <strong>Tualatin Riverkeepers</strong>. The project responds to their need for a tool that helps volunteers and local residents record and report environmental hazards and changes observed along the Tualatin River.
+    </p>
+    <p>
+      The tool supports data collection for outreach, conservation, and restoration planning. It also provides a platform for practicing spatial data collection, interface design, and schema development within the MS GIS curriculum.
+    </p>
+  </section>
+
+  <section>
+    <h2>Design Philosophy</h2>
+    <ul>
+      <li>Prioritize ease of use in the field (minimal typing, large touch targets).</li>
+      <li>Require or encourage photos and audio for documentation.</li>
+      <li>Always collect spatial data via map or GPS input.</li>
+      <li>Use localized species lists based on ecological priorities.</li>
+      <li>Favor explicit class-based schemas over flexible generic structures.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Schema Overview</h2>
+    <p>
+      River Runner observations are structured into eight types, each with a defined set of attributes tailored to the kind of condition being reported. These definitions were made in consultation with Tualatin Riverkeepers and ecological references to support relevant, high-quality data collection.
+    </p>
+    <ul>
+      <li><a href="/observation-types/#wildlife">Wildlife Observations</a></li>
+      <li><a href="/observation-types/#plants">Plant Observations</a></li>
+      <li><a href="/observation-types/#altered">Altered Agricultural Practice</a></li>
+      <li><a href="/observation-types/#erosion">Riverbank Erosion</a></li>
+      <li><a href="/observation-types/#logjams">Log Jams or Blockages</a></li>
+      <li><a href="/observation-types/#water">Unusual Water Conditions</a></li>
+      <li><a href="/observation-types/#trash">Trash or Dumping</a></li>
+      <li><a href="/observation-types/#other">Other</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Survey123 Implementation</h2>
+    <ul>
+      <li>Three-screen flow: Sighting → Approach → Location</li>
+      <li>Form logic built in Survey123 with image and location capture</li>
+      <li>Observations saved to ArcGIS Feature Layers for integration with maps and dashboards</li>
+      <li>Current version serves as a working prototype for testing and feedback</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Future Flutter App Goals</h2>
+    <ul>
+      <li>Offline support and local JSON storage</li>
+      <li>Map view for browsing and filtering observations</li>
+      <li>Custom input flows based on observation type</li>
+      <li>Use class-based observation models in Dart</li>
+      <li>Detach from ESRI for full open-source flexibility</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Known Limitations</h2>
+    <ul>
+      <li>Survey123’s dynamic UI behavior is limited</li>
+      <li>Requires internet unless forms are pre-downloaded in the app</li>
+      <li>Limited control over map styling and offline caching</li>
+    </ul>
+  </section>
+
+    <section>
+    <h2>About This Site</h2>
+    <p>
+      This page was created using VS Code, Eleventy, and GitHub.
+    </p>
+  </section>
+</main>

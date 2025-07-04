@@ -1,0 +1,27 @@
+{
+  "name": "river-runner-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oddios/river-runner-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oddios/river-runner-docs/issues"
+  },
+  "homepage": "https://github.com/oddios/river-runner-docs#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+    "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  }
+}
