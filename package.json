@@ -14,10 +14,10 @@
   },
   "homepage": "https://github.com/oddios/river-runner-docs#readme",
   "keywords": [],
- "scripts": {
-  "start": "node node_modules/@11ty/eleventy/cmd.js --serve",
-  "build": "node node_modules/@11ty/eleventy/cmd.js"
-},
+  "scripts": {
+    "start": "node node_modules/@11ty/eleventy/cmd.js --serve",
+    "build": "node node_modules/@11ty/eleventy/cmd.js"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
