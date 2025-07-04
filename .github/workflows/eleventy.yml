@@ -1,5 +1,4 @@
-# .github/workflows/deploy.yml
-name: Deploy Eleventy site to GitHub Pages
+name: Deploy static site to GitHub Pages
 
 on:
   push:
@@ -16,11 +15,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Eleventy site
+      - name: Build with Eleventy
         run: npx @11ty/eleventy
 
       - name: Upload _site folder
