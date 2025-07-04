@@ -14,11 +14,11 @@
   },
   "homepage": "https://github.com/oddios/river-runner-docs#readme",
   "keywords": [],
-  "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "start": "npx @11ty/eleventy --serve",
+  "build": "npx @11ty/eleventy",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
