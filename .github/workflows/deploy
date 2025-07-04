@@ -33,7 +33,7 @@ jobs:
         run: chmod +x ./node_modules/.bin/eleventy
 
       - name: Build with Eleventy
-        run: npx eleventy
+        run: npm run build
 
       - name: Upload output to Pages
         uses: actions/upload-pages-artifact@v3
